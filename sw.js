@@ -1,6 +1,6 @@
 // Service Worker for performance optimization
 // IMPORTANT: This version is automatically updated during build
-const CACHE_VERSION = 1772630061877; // Updated: 2026-03-04T13:14:21.877Z
+const CACHE_VERSION = 1788893216690; // Updated: 2026-09-08T18:46:56.690Z
 const CACHE_NAME = `aiagents4qual-v${CACHE_VERSION}`;
 const urlsToCache = [
   '/',
