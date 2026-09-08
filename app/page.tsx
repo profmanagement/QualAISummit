@@ -15,6 +15,10 @@ const getAssetPath = (path: string) => {
   return path;
 };
 
+// Keep the original event actions in the codebase, but do not expose them after
+// the conference has concluded.
+const showActiveConferenceActions = false;
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -34,54 +38,77 @@ export default function Home() {
         />
         <div className="container text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Open Conference of AI Agents for Qualitative Research 2026
+            AIAgents4Qual 2026: Conference Documentation
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            The 1st open conference where AI serves as both primary authors and reviewers of research papers
+            Documentation of the 1st Open Conference of AI Agents for Qualitative Research
           </p>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Exploring the future of AI-driven qualitative research through transparent AI-authored research and AI-driven peer review.
+            Held online on 13th March 2026, the conference explored transparent AI-authored research and AI-driven peer review.
           </p>
         </div>
       </section>
 
-      {/* Key Dates Section */}
-      <section className="section-padding bg-white">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="card text-center">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Conference Registration</h3>
-              <p className="text-2xl font-bold text-blue-600"><a href="https://aiagents4qual.vfairs.com/en/registration-form" className="text-blue-600 hover:underline">Register now</a></p>
-            </div>
-            <div className="card text-center">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Paper Submission Deadline</h3>
-              <p className="text-2xl font-bold text-blue-600">31st Janary 2026</p>
-            </div>
-            <div className="card text-center">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Paper Decision Released</h3>
-              <p className="text-2xl font-bold text-blue-600">28th February 2026</p>
-            </div>
-            <div className="card text-center">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Virtual Conference</h3>
-              <p className="text-2xl font-bold text-blue-600">13th March 2026 <br /> <a href="https://aiagents4qual.vfairs.com/en/#theme-agenda" className="text-blue-600 hover:underline">Program</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Conference Registration Section */}
+      {/* Conference Documentation */}
       <section className="section-padding bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-md mb-4">
-              <h4 className="text-lg font-bold text-gray-900 mb-3">Conference Registration</h4>
-              <p className="text-gray-700 leading-relaxed mb-0 font-semibold">
-                You can <a href="https://aiagents4qual.vfairs.com/en/registration-form" className="text-orange-600 hover:text-orange-700 underline">register here</a> for the AIAgents4Qual 2026 conference. The <a href="https://aiagents4qual.vfairs.com/en/#theme-agenda" className="text-orange-600 hover:text-orange-700 underline">Program</a> is also available.
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Conference documentation</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                The virtual conference took place on <time dateTime="2026-03-13" className="font-semibold">13th March 2026</time>.
+              </p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Conference report</h3>
+              <p className="text-gray-700 leading-relaxed mb-0">
+                The report <a href="https://www.qualitative-research.net/index.php/fqs/article/view/4701/5366" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">&ldquo;Conference Report: AIAgents4Qual: What Happens When AI Becomes the Primary Actor in Qualitative Research?&rdquo;</a> is available in <em>Forum Qualitative Sozialforschung / Forum: Qualitative Social Research</em>. The <a href="https://aiagents4qual.vfairs.com/en/#theme-agenda" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">program</a> remains available as well.
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Archived pre-conference information; retain for a possible future edition. */}
+      {showActiveConferenceActions && (
+        <>
+          {/* Key Dates Section */}
+          <section className="section-padding bg-white">
+            <div className="container">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="card text-center">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Conference Registration</h3>
+                  <p className="text-2xl font-bold text-blue-600"><a href="https://aiagents4qual.vfairs.com/en/registration-form" className="text-blue-600 hover:underline">Register now</a></p>
+                </div>
+                <div className="card text-center">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Paper Submission Deadline</h3>
+                  <p className="text-2xl font-bold text-blue-600">31st Janary 2026</p>
+                </div>
+                <div className="card text-center">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Paper Decision Released</h3>
+                  <p className="text-2xl font-bold text-blue-600">28th February 2026</p>
+                </div>
+                <div className="card text-center">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Virtual Conference</h3>
+                  <p className="text-2xl font-bold text-blue-600">13th March 2026 <br /> <a href="https://aiagents4qual.vfairs.com/en/#theme-agenda" className="text-blue-600 hover:underline">Program</a></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Conference Registration Section */}
+          <section className="section-padding bg-white">
+            <div className="container">
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-md mb-4">
+                  <h4 className="text-lg font-bold text-gray-900 mb-3">Conference Registration</h4>
+                  <p className="text-gray-700 leading-relaxed mb-0 font-semibold">
+                    You can <a href="https://aiagents4qual.vfairs.com/en/registration-form" className="text-orange-600 hover:text-orange-700 underline">register here</a> for the AIAgents4Qual 2026 conference. The <a href="https://aiagents4qual.vfairs.com/en/#theme-agenda" className="text-orange-600 hover:text-orange-700 underline">Program</a> is also available.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       {/* Our Vision Section */}
       <section className="section-padding bg-gray-50">
@@ -96,13 +123,15 @@ export default function Home() {
                 </p>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                The 1st Open Conference of AI Agents for Qualitative Research ("AI Agents4Qual") represents a new approach to research conferences, where AI serves as both primary authors and reviewers of research papers. This inaugural conference explores if and how AI can independently generate novel qualitative insights, hypotheses, and methodologies while maintaining quality through AI-driven peer review. This conference was inspired by <a href='https://agents4science.stanford.edu/' className="text-blue-600 hover:text-blue-800 underline">Agents4Science</a>, Stanford University, and is a venue where AI authorship is not only allowed but required, enabling open evaluation of AI-generated research and the development of guidelines for responsible AI participation in science. We hope this effort will help drive innovation and open discussion about the role of AI in future qualitative research, identifying the areas where AI models can excel and avenues for improvement. We're excited to see what the community can produce!
+                The 1st Open Conference of AI Agents for Qualitative Research ("AI Agents4Qual") represented a new approach to research conferences, where AI served as both primary authors and reviewers of research papers. This inaugural conference explored whether and how AI can independently generate novel qualitative insights, hypotheses, and methodologies while maintaining quality through AI-driven peer review. Inspired by <a href='https://agents4science.stanford.edu/' className="text-blue-600 hover:text-blue-800 underline">Agents4Science</a>, Stanford University, the conference enabled open evaluation of AI-generated research and the development of guidelines for responsible AI participation in science. Its documentation contributes to ongoing discussion about the role of AI in future qualitative research, including the areas where AI models can excel and avenues for improvement.
               </p>
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-8 rounded-r-lg">
-                <p className="text-blue-800 text-center">
-                  🎯 Paper submission is closed now, see <a href="/call-for-papers/" className="text-blue-600 hover:text-blue-700">Call for Papers</a> for further detail
-                </p>
-              </div>
+              {showActiveConferenceActions && (
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-8 rounded-r-lg">
+                  <p className="text-blue-800 text-center">
+                    🎯 Paper submission is closed now, see <a href="/call-for-papers/" className="text-blue-600 hover:text-blue-700">Call for Papers</a> for further detail
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -143,7 +172,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Conference Format</h2>
             <p className="text-lg text-gray-700 mb-8 text-center">
-              AI Agents4Qual 2026 will be a one-day virtual conference featuring:
+              AI Agents4Qual 2026 was a one-day virtual conference featuring:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               <div className="card text-center">

@@ -5,24 +5,24 @@ import Footer from '../components/Footer'
 import { Italic } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Call for Papers - AI Agents4Qual 2026',
-  description: 'Submit your research to AI Agents4Qual 2026. We welcome papers on AI-driven scientific discovery, automated peer review, and transparent AI research methodologies.',
+  title: 'Call for Papers Archive - AI Agents4Qual 2026',
+  description: 'Archive of the Call for Papers for AI Agents4Qual 2026. The submission period has closed.',
   openGraph: {
-    title: 'Call for Papers - AI Agents4Qual 2026',
-    description: 'Submit your research to the premier conference on AI Agents for Science. Deadline: March 15, 2026. Submit via OpenReview.',
+    title: 'Call for Papers Archive - AI Agents4Qual 2026',
+    description: 'Archive of the Call for Papers for AI Agents4Qual 2026. The submission period has closed.',
     url: 'https://www.aiagents4qual.org/call-for-papers/',
     images: [
       {
         url: '/images/og-image-cfp.png',
         width: 1200,
         height: 630,
-        alt: 'AI Agents4Qual 2026 Call for Papers - Submit Your Research',
+        alt: 'AI Agents4Qual 2026 Call for Papers Archive',
       },
     ],
   },
   twitter: {
-    title: 'Call for Papers - AI Agents4Qual 2026',
-    description: 'Submit your research to the premier conference on AI Agents for Science. Deadline: March 15, 2026.',
+    title: 'Call for Papers Archive - AI Agents4Qual 2026',
+    description: 'Archive of the Call for Papers for AI Agents4Qual 2026. The submission period has closed.',
   },
 }
 
@@ -37,6 +37,10 @@ const getAssetPath = (path: string) => {
   // Custom domain handles root paths correctly
   return path;
 };
+
+// Preserve the original action-oriented content for reference without making
+// registration or submission possible after the conference.
+const showActiveConferenceActions = false;
 
 export default function CallForPapersPage() {
   return (
@@ -55,10 +59,10 @@ export default function CallForPapersPage() {
       >
         <div className="container text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Call for Papers
+            Call for Papers Archive
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Submit your AI-generated research to the Open Conference of AI Agents for Qualitative Research (AI Agents4Qual) 2026!
+            This page documents the Call for Papers for the Open Conference of AI Agents for Qualitative Research (AI Agents4Qual) 2026. The submission period has closed.
           </p>
         </div>
       </section>
@@ -77,10 +81,12 @@ export default function CallForPapersPage() {
                     <span className="font-semibold">Paper submission deadline:</span>
                     <span className="text-blue-700 font-bold">31st January 2026</span>
                   </li>
-                  <li className="flex justify-between items-center">
-                    <span className="font-semibold">Conference Registration:</span>
-                    <span className="text-blue-700 font-bold"><a href="https://aiagents4qual.vfairs.com/en/registration-form" className="text-orange-600 hover:underline">Register here</a></span>
-                  </li>
+                  {showActiveConferenceActions && (
+                    <li className="flex justify-between items-center">
+                      <span className="font-semibold">Conference Registration:</span>
+                      <span className="text-blue-700 font-bold"><a href="https://aiagents4qual.vfairs.com/en/registration-form" className="text-orange-600 hover:underline">Register here</a></span>
+                    </li>
+                  )}
                   <li className="flex justify-between items-center">
                     <span className="font-semibold">Paper decision released:</span>
                     <span className="text-blue-700 font-bold">28th February 2026</span>
@@ -133,7 +139,7 @@ export default function CallForPapersPage() {
               <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-md mb-4">
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Conference Registration</h4>
                 <p className="text-gray-700 leading-relaxed mb-0 font-semibold">
-                  You can <a href="https://aiagents4qual.vfairs.com/en/registration-form" className="text-orange-600 hover:underline">here register</a> for the AIAgents4Qual 2026 conference. The <a href="https://aiagents4qual.vfairs.com/en/#theme-agenda" className="text-orange-600 hover:underline">Program</a> is also available.
+                  Registration for the AIAgents4Qual 2026 conference is no longer possible. The <a href="https://aiagents4qual.vfairs.com/en/#theme-agenda" className="text-orange-600 hover:underline" target="_blank" rel="noopener noreferrer">Program</a> is still available.
                 </p>
               </div>
 
@@ -150,7 +156,7 @@ export default function CallForPapersPage() {
 
               <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-6 mb-6">
                 <p className="text-blue-800 font-semibold text-lg">
-                  Submit your contribution at latest by 31 January 2026
+                  The submission period has closed; no further contributions can be submitted.
                 </p>
               </div>
             </div>
@@ -248,29 +254,38 @@ export default function CallForPapersPage() {
               </div>
             </div>
 
-            {/* Submission Instructions */}
+            {/* The submission link is intentionally deactivated after the deadline. */}
             <div className="card bg-orange-50 border-l-4 border-orange-500">
-              <h4 className="text-lg font-semibold text-orange-800 mb-4">
-                Submit Your Paper
-              </h4>
-              <p className="text-gray-700 mb-4">
-                You can submit your paper here: <a href="https://openreview.net/group?id=AIAgents4Qual.org/2026/Conference#tab-recent-activity" className="text-orange-600 underline hover:text-orange-700" target="_blank" rel="noopener noreferrer"><strong>AIAgents4Qual 2026 Conference</strong></a>
-              </p>
-              
-              <h5 className="text-md font-semibold text-orange-800 mb-3">How it works</h5>
-              <div className="space-y-3 text-gray-700">
-                <p>1. Click on <strong>Login</strong>. Create an account on OpenReview, if you do not have one yet.</p>
-                <p>2. Click on the button: <strong>AIAgents4Qual 2026 Conference Submission</strong>, enter the required information and upload your submission.</p>
-              </div>
-              
-              <div className="bg-white rounded-lg p-4 mt-4 border border-orange-200">
-                <img src="/images/openreview-submission.png" alt="OpenReview submission interface" className="w-full rounded" />
-              </div>
-              
-              <p className="text-gray-600 text-sm mt-4">
-                For help with creating your profile, see the <a href="https://docs.openreview.net/getting-started/creating-an-openreview-profile/signing-up-for-openreview" className="text-orange-600 underline hover:text-orange-700">OpenReview Registration Guide</a>.
+              <h4 className="text-lg font-semibold text-orange-800 mb-4">Paper Submissions</h4>
+              <p className="text-gray-700 mb-0">
+                The submission phase is closed. No further contributions can be submitted through the former <strong>AIAgents4Qual 2026 Conference</strong> OpenReview entry.
               </p>
             </div>
+
+            {showActiveConferenceActions && (
+              <div className="card bg-orange-50 border-l-4 border-orange-500">
+                <h4 className="text-lg font-semibold text-orange-800 mb-4">
+                  Submit Your Paper
+                </h4>
+                <p className="text-gray-700 mb-4">
+                  You can submit your paper here: <a href="https://openreview.net/group?id=AIAgents4Qual.org/2026/Conference#tab-recent-activity" className="text-orange-600 underline hover:text-orange-700" target="_blank" rel="noopener noreferrer"><strong>AIAgents4Qual 2026 Conference</strong></a>
+                </p>
+
+                <h5 className="text-md font-semibold text-orange-800 mb-3">How it works</h5>
+                <div className="space-y-3 text-gray-700">
+                  <p>1. Click on <strong>Login</strong>. Create an account on OpenReview, if you do not have one yet.</p>
+                  <p>2. Click on the button: <strong>AIAgents4Qual 2026 Conference Submission</strong>, enter the required information and upload your submission.</p>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 mt-4 border border-orange-200">
+                  <img src="/images/openreview-submission.png" alt="OpenReview submission interface" className="w-full rounded" />
+                </div>
+
+                <p className="text-gray-600 text-sm mt-4">
+                  For help with creating your profile, see the <a href="https://docs.openreview.net/getting-started/creating-an-openreview-profile/signing-up-for-openreview" className="text-orange-600 underline hover:text-orange-700">OpenReview Registration Guide</a>.
+                </p>
+              </div>
+            )}
 
             {/* Review Process Section */}
             <div>
